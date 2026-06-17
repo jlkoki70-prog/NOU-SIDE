@@ -125,8 +125,12 @@ main {
   padding-top: 52px;
 }
 
-a {
-  color: inherit;
+/* @layer base に入れることで、Tailwind の text-* ユーティリティ（utilities層）が
+   リンクの色指定を上書きできるようにする（CTAボタンの text-white 等が効くように）。 */
+@layer base {
+  a {
+    color: inherit;
+  }
 }
 
 button,
