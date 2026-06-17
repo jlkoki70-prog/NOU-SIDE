@@ -61,13 +61,13 @@ const lpSections: LPSection[] = [
       "現在も人口減少が止まらないのは、これまでの対策が届きにくい場所に、まだ課題が残っているからです。",
       "だからこそ、地域の力がまだ残っている今のうちに、再生に取り組む必要があります。",
     ],
-    image: "/images/lp/section3-hero-infra-grid.png",
+    image: "/images/lp/section3-hero-infra-grid.webp",
     imageAlt: "買い物・医療・教育・交通・通信・金融・生活支援・ガソリンスタンドの8つの生活インフラを示す図",
     summary: "▶ 力が残っているうちに、次の一手を整えることが大切です。",
     accordionLabel: "課題が残りやすい場所を詳しく見る",
     accordionItems: [
-      { title: "早めの対策が必要な理由", image: "/images/lp/section2-accordion-infra-decline.png", imageAlt: "生活インフラが減るほど農村再生が難しくなることを示す図" },
-      { title: "課題が残りやすい場所", image: "/images/lp/section2-accordion-uncovered-roles.png", imageAlt: "農家・組合・自治体の各業務のあいだに残りやすい課題を示す図" },
+      { title: "早めの対策が必要な理由", image: "/images/lp/section2-accordion-infra-decline.webp", imageAlt: "生活インフラが減るほど農村再生が難しくなることを示す図" },
+      { title: "課題が残りやすい場所", image: "/images/lp/section2-accordion-uncovered-roles.webp", imageAlt: "農家・組合・自治体の各業務のあいだに残りやすい課題を示す図" },
     ],
   },
   {
@@ -79,16 +79,16 @@ const lpSections: LPSection[] = [
       "知りたいのは収入だけではありません。住まい、教育、医療、もしものときの備え。そして、農地や技術を引き継げるか。暮らし全体が成り立つかどうかです。",
       "「ここでやっていける」と思える判断材料を、地域がそろえておく必要があります。",
     ],
-    image: "/images/lp/section3-hero-smartphone-couple.png",
+    image: "/images/lp/section3-hero-smartphone-couple.webp",
     imageAlt: "都会にいる次世代が地域の情報をスマートフォンで確認しているイラスト",
     summary: "▶ 稼ぎ・暮らし・備えの3つをそろえることが、次世代の判断につながります。",
     accordionLabel: "判断につながる見通しを詳しく見る",
     accordionItems: [
-      { title: "就農判断で、もう一歩見えた方がよいこと", image: "/images/lp/section4-accordion-judgment-factors.png", imageAlt: "経営の数字・暮らしの条件・地域との関係の3つが見えると就農判断につながることを示す図" },
-      { title: "稼ぎ・暮らし・備えで見る", image: "/images/lp/section3-accordion-earn-live-prepare.png", imageAlt: "次世代が知りたい情報は、稼ぎ・暮らし・備えの3つに整理できる" },
-      { title: "認知・判断・行動で見る、選ばれる地域の違い", image: "/images/lp/section2-accordion-recognition-flow.png", imageAlt: "認知・判断・行動の3ステップで選ばれる地域の違いを示す図" },
-      { title: "判断できる導線を見る", image: "/images/lp/section3-accordion-journey.png", imageAlt: "選ばれる地域には、次世代が「判断できる導線」が整っている" },
-      { title: "伸びていく道筋まで見える条件を見る", image: "/images/lp/section4-accordion-growth-path.png", imageAlt: "始められる条件に加えて、伸びていく道筋まで見える" },
+      { title: "就農判断で、もう一歩見えた方がよいこと", image: "/images/lp/section4-accordion-judgment-factors.webp", imageAlt: "経営の数字・暮らしの条件・地域との関係の3つが見えると就農判断につながることを示す図" },
+      { title: "稼ぎ・暮らし・備えで見る", image: "/images/lp/section3-accordion-earn-live-prepare.webp", imageAlt: "次世代が知りたい情報は、稼ぎ・暮らし・備えの3つに整理できる" },
+      { title: "認知・判断・行動で見る、選ばれる地域の違い", image: "/images/lp/section2-accordion-recognition-flow.webp", imageAlt: "認知・判断・行動の3ステップで選ばれる地域の違いを示す図" },
+      { title: "判断できる導線を見る", image: "/images/lp/section3-accordion-journey.webp", imageAlt: "選ばれる地域には、次世代が「判断できる導線」が整っている" },
+      { title: "伸びていく道筋まで見える条件を見る", image: "/images/lp/section4-accordion-growth-path.webp", imageAlt: "始められる条件に加えて、伸びていく道筋まで見える" },
     ],
   },
   {
@@ -103,12 +103,12 @@ const lpSections: LPSection[] = [
       "関係者が同じ前提に立って話せる場があり、そこで出た意見が次の行動につながっていく。その積み重ねが、次世代の「ここでやっていける」という判断を支え、地域の未来を動かし、その将来性をつくっていきます。",
       "NOU-SIDEは、そのための協議と合意形成を支えます。",
     ],
-    summaryImage: "/images/lp/section5-body-village-charm.png",
+    summaryImage: "/images/lp/section5-body-village-charm.webp",
     summaryImageAlt: "四位一体でつくる村の魅力——ベテラン農家・組合・支援機関・自治体・次世代の担い手が連携して次世代に選ばれる条件を整えることを示す図",
     summary: "▶ 実行する当事者の納得が、地域施策の実行力と継続性を左右します。",
     accordionLabel: "合意形成の仕組みを詳しく見る",
     accordionItems: [
-      { title: "実行する当事者の納得感を見る", image: "/images/lp/section5-accordion-consensus.png", imageAlt: "関係者が円卓で協議している図解。実行する当事者の納得感は、その将来性を大きく左右する。" },
+      { title: "実行する当事者の納得感を見る", image: "/images/lp/section5-accordion-consensus.webp", imageAlt: "関係者が円卓で協議している図解。実行する当事者の納得感は、その将来性を大きく左右する。" },
     ],
   },
   {
@@ -121,13 +121,13 @@ const lpSections: LPSection[] = [
       "地域の未来が見える形になるほど、就農や移住だけでなく、販路開拓、企業連携、雇用、投資など、つながれる相手と可能性は広がっていきます。",
       "NOU-SIDEは、地域に残る力と進む方向を整理し、人・企業・資金が関わるための判断材料を、地域とともに整えます。",
     ],
-    image: "/images/lp/section7-growing-future-v2.png",
+    image: "/images/lp/section7-growing-future-v2.webp",
     imageAlt: "次世代が地域に定着し、計画的な行動が周囲の信頼と協力を生むことで、地域の新たな将来性へと繋がっていくことを示すイラスト",
     summary: "▶ 地域の未来が見える形になるほど、関わる相手と可能性は広がっていきます。",
     accordionLabel: "可能性が広がる仕組みを詳しく見る",
     accordionItems: [
-      { title: "将来性が見える地域に、人も企業も資金も集まる", image: "/images/lp/section6-accordion-future-visibility.png", imageAlt: "将来性が見える地域に人・企業・資金が集まる仕組みを示す図" },
-      { title: "地域側の覚悟が、都市側の相手を変える", image: "/images/lp/section6-accordion-partner-depth.png", imageAlt: "地域側の整える範囲が広がるほど、つながれる都市側の相手も深くなることを示す図" },
+      { title: "将来性が見える地域に、人も企業も資金も集まる", image: "/images/lp/section6-accordion-future-visibility.webp", imageAlt: "将来性が見える地域に人・企業・資金が集まる仕組みを示す図" },
+      { title: "地域側の覚悟が、都市側の相手を変える", image: "/images/lp/section6-accordion-partner-depth.webp", imageAlt: "地域側の整える範囲が広がるほど、つながれる都市側の相手も深くなることを示す図" },
     ],
   },
   {
@@ -141,14 +141,14 @@ const lpSections: LPSection[] = [
       "次世代が必要な情報を整えられるか。そして、その情報に気づけるか。この地域で暮らし、農業を続けられる見通しが立つか。次の一歩へ進めるだけの具体性があるか。",
       "NOU-SIDEは、地域にある取組みや機能を見立て、次世代が認知し、判断し、行動できる状態へ整えるための段取りを支えます。",
     ],
-    image: "/images/lp/section4-hero-current-position.png",
+    image: "/images/lp/section4-hero-current-position.webp",
     imageAlt: "地域ごとに現在地は異なっている。知っている・やっている・できているの3段階を示す図",
     accordionLabel: "見える状態に整える条件を詳しく見る",
     accordionItems: [
-      { title: "地域によって、必要な一歩は違います", image: "/images/lp/section4-accordion-region-differs.png", imageAlt: "地域の機能・余力と見せられる中身の2軸で、地域ごとに必要な一歩が異なることを示す図" },
-      { title: "地域側にも、移住希望者側にも本音がある", image: "/images/lp/section4-accordion-honest-intentions.png", imageAlt: "地域側・移住希望者側それぞれの建前と本音の違いを示す図" },
-      { title: "空き農地があっても、すぐに受け入れできるとは限らない", image: "/images/lp/section4-accordion-vacant-farmland.png", imageAlt: "空き農地の受け入れに関わる隣地作物・農薬ドリフト・水源水利など6つの条件を示す図" },
-      { title: "議論の難関——地域全体でつなぐ議論が必要になる", image: "/images/lp/section4-accordion-discussion-barrier.png", imageAlt: "農家・組合・支援機関・自治体それぞれの守備範囲と本音・限界点、議論の難関を示す図" },
+      { title: "地域によって、必要な一歩は違います", image: "/images/lp/section4-accordion-region-differs.webp", imageAlt: "地域の機能・余力と見せられる中身の2軸で、地域ごとに必要な一歩が異なることを示す図" },
+      { title: "地域側にも、移住希望者側にも本音がある", image: "/images/lp/section4-accordion-honest-intentions.webp", imageAlt: "地域側・移住希望者側それぞれの建前と本音の違いを示す図" },
+      { title: "空き農地があっても、すぐに受け入れできるとは限らない", image: "/images/lp/section4-accordion-vacant-farmland.webp", imageAlt: "空き農地の受け入れに関わる隣地作物・農薬ドリフト・水源水利など6つの条件を示す図" },
+      { title: "議論の難関——地域全体でつなぐ議論が必要になる", image: "/images/lp/section4-accordion-discussion-barrier.webp", imageAlt: "農家・組合・支援機関・自治体それぞれの守備範囲と本音・限界点、議論の難関を示す図" },
     ],
   },
   {
@@ -163,24 +163,24 @@ const lpSections: LPSection[] = [
       "地域には、残したい知恵や仕組みがある一方で、次世代が続けられる形に変えたほうがいいものもあります。\n過去を否定する話ではなく、これからどうするかを、地域で決める話です。",
       "NOU-SIDEは、立場ごとの本音に加え、再生産価格・出荷量・施設維持費といった数字をもとに、複雑に絡み合う論点を整理します。感情論でも慣習論でもなく、続けられる条件を見える形に整え、地域が答えを選べる状態をつくります。",
     ],
-    image: "/images/lp/section9-honne-numbers-main.png",
+    image: "/images/lp/section9-honne-numbers-main.webp",
     imageAlt: "本音と数字を整えて、次の一歩へつなげる。農家・組合・自治体が地図と資料を囲んで対話し、NOU-SIDEが論点を整理して地域が判断できる状態を整えることを示すイラスト",
     summary: "▶ 決めるのは地域です。NOU-SIDEは、決めるための材料を整えます。",
     accordionLabel: "NOU-SIDEの整理プロセスを詳しく見る",
     accordionItems: [
       {
         title: "本音と数字をそろえ、次の一歩へつなげる流れを見る",
-        image: "/images/lp/section9-honne-numbers-bridge.png",
+        image: "/images/lp/section9-honne-numbers-bridge.webp",
         imageAlt: "地域の中にある見えにくい負担を、NOU-SIDEが本音を聞き数字をそろえることで橋渡しし、再生産条件や役割分担が見える「次の一歩へ進める状態」へつなげることを示す図",
       },
       {
         title: "地域が自ら動ける状態をつくる",
-        image: "/images/lp/section7-hero-nouside-essence.png",
+        image: "/images/lp/section7-hero-nouside-essence.webp",
         imageAlt: "NOU-SIDEの本質を示すイラスト",
       },
       {
         title: "三者が持ち込むもの・返るものを見る",
-        image: "/images/lp/section6-accordion-input-return.png",
+        image: "/images/lp/section6-accordion-input-return.webp",
         imageAlt: "農家・組合・自治体の三者がNOU-SIDEに持ち込むもの、返るものの関係図",
       },
     ],
@@ -257,7 +257,7 @@ const placeholderPages: Record<
 };
 
 const heroCandidates: { src: string; label: string }[] = [
-  { src: "/images/lp/section-01-hero-background.png", label: "section-01-hero-background.png（現在使用中）" },
+  { src: "/images/lp/section-01-hero-background.webp", label: "section-01-hero-background.png（現在使用中）" },
 ];
 
 // ── 詳細ページ データ（NOU-SIDE導入後、地域の各論をどう動かしていくのか） ─────────
@@ -271,7 +271,7 @@ const detailSections: DetailSectionData[] = [
       "AI相談窓口が、農家や次世代からの個別の声をオンラインで受け止め、地域のデータとして整理します。",
       "そのデータをもとに、協議会では関係者がオフラインで顔を合わせ、論点整理・方針共有・実行・改善の循環をつくります。",
     ],
-    image: "/images/lp/detail01-ai-madoguchi-kyogikai.jpeg",
+    image: "/images/lp/detail01-ai-madoguchi-kyogikai.webp",
     imageAlt: "AI窓口と協議会で地域の各論を動かす図。オンラインで個別のやり取りを地域データに一本化し、オフラインで共通データをもとに協議会が方向をそろえる",
   },
   {
@@ -282,7 +282,7 @@ const detailSections: DetailSectionData[] = [
       "相談の入口が農家・組合・自治体に分かれていると、次世代は誰に聞けばいいか迷い、職員は情報を整理し直す手間が生まれます。",
       "入口を一本化すると、相談のしやすさ、前捌き、共有、施策への活用がしやすくなります。AIが担うのは、人の代わりではなく入口の整理と前捌きです。",
     ],
-    image: "/images/lp/detail02-entry-consolidation.jpeg",
+    image: "/images/lp/detail02-entry-consolidation.webp",
     imageAlt: "AI相談窓口への一本化がなぜ効くのかを示す図。入口が分かれている状態の課題と、一本化によって青年層・職員・組織運営にもたらされる効果",
   },
   {
@@ -293,7 +293,7 @@ const detailSections: DetailSectionData[] = [
       "同じ説明の繰り返し、聞き直し、担当探し、引き継ぎ漏れ、記録の再入力、窓口のたらい回し。こうしたロスは、相談する側にもされる側にも重い負担です。",
       "AIがこの繰り返し作業を引き受けることで、人は対話・伴走・判断という本来の仕事に集中しやすくなります。",
     ],
-    image: "/images/lp/detail03-compress-consultation.jpeg",
+    image: "/images/lp/detail03-compress-consultation.webp",
     imageAlt: "AIで相談対応そのものをどう圧縮するかを示す図。相談の入口一本化、AIによる前捌き、内部共有と振分の自動化、人が本来担う対応への集中という4ステップ",
   },
   {
@@ -304,7 +304,7 @@ const detailSections: DetailSectionData[] = [
       "「担当者しか分からない」状態は、人が代わるたびに地域の経緯を失わせます。",
       "相談履歴を検索できる形で残すことで、初見の職員でも経緯にたどり着け、相談者も毎回最初から説明し直さずに済みます。記録を個人の記憶から、組織の資産に変えます。",
     ],
-    image: "/images/lp/detail04-handover-asset.jpeg",
+    image: "/images/lp/detail04-handover-asset.webp",
     imageAlt: "相談履歴を検索できる引き継ぎ資産に変える仕組みを示す図。相談者の手がかりからAIが履歴を検索し、過去の記録を要約・表示し、初見の職員でも対応につなげる",
   },
   {
@@ -315,7 +315,7 @@ const detailSections: DetailSectionData[] = [
       "事前のアプリ回答で情報を整理し、面談前に論点を仮整理します。トップランナーとの比較や差分分析を通じて、改善提案につなげます。",
       "これは査定ではなく、若手の学習支援と地域全体の出荷力向上のための整理です。",
     ],
-    image: "/images/lp/detail05-pre-sorting-analysis.jpeg",
+    image: "/images/lp/detail05-pre-sorting-analysis.webp",
     imageAlt: "AIでつなぐ農家の前捌き・面談・差分分析を示す図。16問アプリでの事前整理から、面談、トップランナー比較、差分分析、改善提案までの流れ",
   },
   {
@@ -326,7 +326,7 @@ const detailSections: DetailSectionData[] = [
       "地域には、すでに優れた知見を持つ農家がいます。ただ、個人に留まっていると地域全体には広がりにくいのが実情です。",
       "聞き取り、標準化、横展開という流れに乗せることで、ソフトの共同インフラがハードの共同インフラ維持にもつながっていきます。",
     ],
-    image: "/images/lp/detail06-knowhow-horizontal.jpeg",
+    image: "/images/lp/detail06-knowhow-horizontal.webp",
     imageAlt: "トップ農家のノウハウを地域の出荷力に変える図。聞き取り・標準化・横展開によって、ソフトの共同インフラがハードの共同インフラ維持にもつながることを示す",
   },
   {
@@ -337,7 +337,7 @@ const detailSections: DetailSectionData[] = [
       "就農前、修了〜一人前、独り立ち〜拡大、畳む時期。それぞれの時期に必要な情報を整理し、つなぎます。",
       "離農と就農を分断せずに扱うことで、継承の環境が整っていきます。",
     ],
-    image: "/images/lp/section5-accordion-four-stages.png",
+    image: "/images/lp/section5-accordion-four-stages.webp",
     imageAlt: "NOU-SIDEボットがつなぐ、就農前・修了〜一人前・独り立ち〜拡大・畳む時期の4つのステージを示す図",
   },
   {
@@ -348,7 +348,7 @@ const detailSections: DetailSectionData[] = [
       "担い手不足は、農家が減る問題だけではありません。農家が減ることで組合財源が縮小し、人員を減らさざるを得なくなり、相談対応・営農支援・地域調整・継承マッチングといった属人的な機能が弱っていきます。",
       "前捌き・共有・分析を仕組み化して余力を生むことで、地域はようやく担い手対策という重要な判断に向き合えるようになります。",
     ],
-    image: "/images/lp/detail08-capacity-crisis-cycle.jpeg",
+    image: "/images/lp/detail08-capacity-crisis-cycle.webp",
     imageAlt: "なぜ組合員対応余力の確保が死活問題なのかを示す図。担い手・農家が減る、組合財源が縮小する、人員を減らさざるを得ない、既存業務対応で手一杯になる、相談・伴走・調整機能が低下する、担い手不足対策に割けない、新規就農・継承・定着が進みにくいという悪循環",
   },
 ];
