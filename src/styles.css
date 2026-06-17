@@ -2429,3 +2429,15 @@ footer {
   }
 }
 
+/* ── スマホ縦のみ：日本語を自然な区切りで折り返す ──────────────────
+   word-break: keep-all で勝手な改行を止め、jpWrap が挿入した
+   <wbr>（句読点直後・指定マーカー）の位置でのみ折り返す。
+   万一はみ出す場合は global の overflow-wrap: anywhere が緊急回避。
+   PC・スマホ横（幅>480px や横向き）には一切適用しない。 */
+@media (max-width: 480px) and (orientation: portrait) {
+  .section-header h2,
+  .section-body p {
+    word-break: keep-all;
+  }
+}
+

@@ -49,12 +49,30 @@ type DetailSectionData = {
   placeholderLabel?: string;
 };
 
+// 改行機会(<wbr>)を挿入する。「|」は明示的な改行ポイント（出力からは除去）。
+// 句読点（、。」）の直後にも改行機会を入れる。
+// スマホ縦の word-break: keep-all 時に、自然な位置（文の区切り）で折り返すための補助。
+// PC・スマホ横では keep-all が無効なので <wbr> は実質的に影響しない。
+function jpWrap(text: string): ReactNode {
+  const out: ReactNode[] = [];
+  const tokens = text.split("|");
+  tokens.forEach((tok, ti) => {
+    const parts = tok.split(/(?<=[、。」])/);
+    parts.forEach((part, i) => {
+      out.push(part);
+      if (i < parts.length - 1) out.push(<wbr key={`${ti}-${i}`} />);
+    });
+    if (ti < tokens.length - 1) out.push(<wbr key={`b${ti}`} />);
+  });
+  return out;
+}
+
 // ── メインLP セクション（Section 2–6） ─────────────────────────────────────────
 
 const lpSections: LPSection[] = [
   {
     id: "section-02",
-    title: "人が減るほど、地域を支える力は弱くなります。",
+    title: "人が減るほど、地域を支える力は|弱くなります。",
     body: [
       "人が減ると、地域を支える力も魅力も弱まっていきます。",
       "地域の暮らしや仕組みは、すべて人の手で支えられているからです。",
@@ -570,15 +588,15 @@ function ContentSection({
   return (
     <section className="lp-section" id={section.id} aria-labelledby={`${section.id}-title`}>
       <div className="section-header">
-        <h2 id={`${section.id}-title`}>{section.title}</h2>
+        <h2 id={`${section.id}-title`}>{jpWrap(section.title)}</h2>
       </div>
       <div className={`section-main${hasRightColumn ? "" : " section-main--text-only"}`}>
         <div className="section-body">
           {section.subtitle && (
-            <p className="section-subtitle">{section.subtitle}</p>
+            <p className="section-subtitle">{jpWrap(section.subtitle)}</p>
           )}
           {section.body.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+            <p key={paragraph}>{jpWrap(paragraph)}</p>
           ))}
         </div>
         {section.image && (
@@ -737,7 +755,7 @@ function EntranceSection() {
   return (
     <section className="entrance-section lp-section" id="entrance" aria-labelledby="entrance-title">
       <div className="section-header">
-        <h2 id="entrance-title">まず、あなたの入口から始めてください。</h2>
+        <h2 id="entrance-title">{jpWrap("まず、あなたの入口から|始めてください。")}</h2>
       </div>
       <p className="entrance-lead">
         立場によって、見える課題も、できることも違います。<br />
