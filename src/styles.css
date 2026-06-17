@@ -1295,6 +1295,10 @@ footer {
     padding: 0 16px;
   }
 
+  .section-body {
+    text-align: center;
+  }
+
   .section-footer {
     padding: 0 16px;
   }
