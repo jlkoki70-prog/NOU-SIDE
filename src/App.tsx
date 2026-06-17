@@ -504,7 +504,7 @@ function HomePage() {
             </div>
             <img
               className="hero-visual-img"
-              src="/images/lp/section-01-hero-background.png"
+              src="/images/lp/section-01-hero-background.webp"
               alt=""
               aria-hidden="true"
             />

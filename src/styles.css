@@ -1477,7 +1477,7 @@ footer {
     max-height: calc(100vh - 160px);
     border-radius: 20px;
     overflow: hidden;
-    background-image: url('/images/lp/section-01-hero-background.png');
+    background-image: url('/images/lp/section-01-hero-background.webp');
     background-size: cover;
     background-position: center center;
     display: flex;
