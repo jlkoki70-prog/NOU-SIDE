@@ -109,7 +109,7 @@ function getInitialVariant(): Variant {
 // Web3Forms のアクセスキー（公開前提のキー。クライアントに埋め込んで使用）。
 // nouside70@gmail.com で web3forms.com に登録して発行されたキーをここに貼る。
 // 未設定の間はメール送信せず、完了画面のみ表示する。
-const WEB3FORMS_ACCESS_KEY = "";
+const WEB3FORMS_ACCESS_KEY = "3151886d-6884-4459-81df-6f4abc52bd2b";
 
 export default function ContactPage() {
   const [variant, setVariant] = useState<Variant>(getInitialVariant);
