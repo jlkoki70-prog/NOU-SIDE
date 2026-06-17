@@ -106,9 +106,16 @@ function getInitialVariant(): Variant {
   return null;
 }
 
+// Web3Forms のアクセスキー（公開前提のキー。クライアントに埋め込んで使用）。
+// nouside70@gmail.com で web3forms.com に登録して発行されたキーをここに貼る。
+// 未設定の間はメール送信せず、完了画面のみ表示する。
+const WEB3FORMS_ACCESS_KEY = "";
+
 export default function ContactPage() {
   const [variant, setVariant] = useState<Variant>(getInitialVariant);
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
 
   const canSubmit = form.name.trim() && form.email.trim() && form.message.trim();
@@ -124,14 +131,56 @@ export default function ContactPage() {
     window.scrollTo({ top: 0, behavior: "instant" });
   };
 
-  const handleSubmit = () => {
-    if (!canSubmit) return;
-    setSubmitted(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const handleSubmit = async () => {
+    if (!canSubmit || sending) return;
+    setError(false);
+    const source = typeof window !== "undefined"
+      ? new URLSearchParams(window.location.search).get("source") || "直接"
+      : "直接";
+    const badge = variant ? VARIANT_CONFIG[variant].badge : "未選択";
+
+    // キー未設定時は従来どおり完了画面のみ（メール送信なし）
+    if (!WEB3FORMS_ACCESS_KEY) {
+      setSubmitted(true);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    setSending(true);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `【NOU-SIDE】お問い合わせ（${badge}）`,
+          from_name: "NOU-SIDE サイト",
+          replyto: form.email,
+          種別: badge,
+          流入元: source,
+          お名前: form.name,
+          メールアドレス: form.email,
+          電話番号: form.phone || "（未記入）",
+          お問い合わせ内容: form.message,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   const handleResetAll = () => {
     setSubmitted(false);
+    setError(false);
     setVariant(null);
     setForm({ name: "", email: "", phone: "", message: "" });
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -394,15 +443,20 @@ export default function ContactPage() {
                 <button
                   type="button"
                   onClick={handleSubmit}
-                  disabled={!canSubmit}
+                  disabled={!canSubmit || sending}
                   className={`w-full font-black px-8 py-4 rounded-full transition-all text-sm tracking-wider shadow-md
-                    ${canSubmit
+                    ${canSubmit && !sending
                       ? "bg-emerald-700 hover:bg-emerald-800 text-white cursor-pointer"
                       : "bg-stone-200 text-stone-400 cursor-not-allowed shadow-none"
                     }`}
                 >
-                  {canSubmit ? "送信する →" : "必須項目をご記入ください"}
+                  {sending ? "送信中…" : canSubmit ? "送信する →" : "必須項目をご記入ください"}
                 </button>
+                {error && (
+                  <p className="text-red-600 text-xs text-center mt-3 leading-relaxed">
+                    送信に失敗しました。通信環境をご確認のうえ、もう一度お試しください。
+                  </p>
+                )}
                 <p className="text-stone-400 text-xs text-center mt-3 leading-relaxed">
                   送信後、通常2〜3営業日以内にご返信いたします
                 </p>
