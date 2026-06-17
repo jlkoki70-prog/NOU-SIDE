@@ -1,0 +1,589 @@
+/* ── /farmers 入口ページ ─────────────────────────────────── */
+
+.fc-entry-wrap {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.fc-entry-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.fc-entry-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #2d6e45;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.fc-entry-head h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 600;
+  color: #1a3d22;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.fc-entry-head p {
+  font-size: 14px;
+  color: #4a5550;
+  line-height: 1.7;
+}
+
+.fc-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 640px) {
+  .fc-entry-grid {
+    grid-template-columns: 1fr;
+  }
+  .fc-entry-wrap {
+    padding: 32px 16px 48px;
+  }
+}
+
+.fc-entry-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #fafaf6;
+  border: 1px solid #d8dfd5;
+  padding: 22px 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.fc-entry-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: #1a3d22;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.25s ease;
+}
+
+.fc-entry-card:hover {
+  background: #f0f6eb;
+  border-color: #5a7a5e;
+}
+
+.fc-entry-card:hover::before {
+  transform: scaleY(1);
+}
+
+.fc-entry-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fc-entry-card-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a3d22;
+  letter-spacing: 0.02em;
+}
+
+.fc-entry-card-sub {
+  font-size: 12px;
+  color: #7a8580;
+  line-height: 1.5;
+}
+
+.fc-entry-card-sub--note {
+  font-size: 11px;
+  color: #9da8a4;
+  margin-top: 2px;
+}
+
+.fc-entry-card-arrow {
+  font-size: 16px;
+  color: #1a3d22;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.fc-entry-card:hover .fc-entry-card-arrow {
+  transform: translateX(4px);
+}
+
+.fc-entry-back {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.fc-entry-back a {
+  font-size: 13px;
+  color: #7a8580;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.fc-entry-back a:hover {
+  color: #1a3d22;
+}
+
+/* ── /farmers/check チャットUI ───────────────────────────── */
+
+.fc-check-section {
+  padding: 0 0 64px;
+}
+
+.fc-check-lead-bar {
+  background: #f0f6eb;
+  border-bottom: 1px solid #d8dfd5;
+  padding: 16px 24px;
+  text-align: center;
+}
+
+.fc-check-lead-bar p {
+  font-size: 13px;
+  color: #4a5550;
+  line-height: 1.6;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.fc-check-lead-bar strong {
+  color: #1a3d22;
+  font-weight: 600;
+}
+
+.fc-chat-area {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+}
+
+.fc-bot-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.fc-bot-icon {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #1a3d22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fc-bot-icon-inner {
+  font-size: 11px;
+  font-weight: 700;
+  color: #f0f6eb;
+  letter-spacing: 0.02em;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.fc-bubble {
+  max-width: 82%;
+  background: #fff;
+  border: 1px solid #d8dfd5;
+  border-radius: 4px 16px 16px 16px;
+  padding: 16px 18px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #1f2a24;
+}
+
+.fc-bubble p {
+  margin: 0 0 8px;
+}
+
+.fc-bubble p:last-child {
+  margin-bottom: 0;
+}
+
+.fc-bubble strong {
+  font-weight: 700;
+  color: #1a3d22;
+}
+
+.fc-tag-badge {
+  display: inline-block;
+  background: #f0f6eb;
+  color: #1a3d22;
+  border: 1px solid #b8d4bb;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 4px 0 12px;
+}
+
+.fc-note {
+  font-size: 12px !important;
+  color: #7a8580;
+  line-height: 1.6;
+  margin-top: 6px;
+}
+
+.fc-choices {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.fc-choice {
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  border: 1px solid #d8dfd5;
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #1f2a24;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-family: 'Noto Sans JP', sans-serif;
+  transition: all 0.2s ease;
+}
+
+.fc-choice::after {
+  content: "›";
+  color: #9da8a4;
+  font-size: 24px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.fc-choice:hover {
+  background: #f0f6eb;
+  border-color: #5a7a5e;
+}
+
+.fc-free-input {
+  margin-bottom: 12px;
+}
+
+.fc-text-input,
+.fc-text-area {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #d8dfd5;
+  border-radius: 10px;
+  padding: 13px 16px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #1f2a24;
+  outline: none;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.fc-text-input:focus,
+.fc-text-area:focus {
+  border-color: #5a7a5e;
+  box-shadow: 0 0 0 3px rgba(90, 122, 94, 0.15);
+}
+
+.fc-back-wrap {
+  margin-top: 8px;
+}
+
+.fc-back-btn {
+  font-size: 12px;
+  color: #7a8580;
+  background: none;
+  border: 1px solid #d8dfd5;
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-family: 'Noto Sans JP', sans-serif;
+  transition: all 0.2s ease;
+}
+
+.fc-back-btn:hover {
+  color: #1a3d22;
+  border-color: #5a7a5e;
+}
+
+.fc-restart-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.fc-restart-btn {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #d8dfd5;
+  color: #4a5550;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Noto Sans JP', sans-serif;
+  transition: all 0.2s ease;
+}
+
+.fc-restart-btn:hover {
+  background: #f5f7f3;
+}
+
+/* ── end 画面 ────────────────────────────────────────────── */
+
+.fc-result-wrap {
+  margin-top: 4px;
+}
+
+.fc-result-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  color: #5a7a5e;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.fc-result-heading {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1a3d22;
+  margin-bottom: 16px;
+}
+
+.fc-result-summary {
+  background: #fafaf6;
+  border: 1px solid #d8dfd5;
+  border-radius: 10px;
+  padding: 16px 18px;
+  font-size: 13.5px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.fc-result-summary dt {
+  font-weight: 700;
+  color: #4a5550;
+  font-size: 11.5px;
+  margin-top: 8px;
+}
+
+.fc-result-summary dt:first-child {
+  margin-top: 0;
+}
+
+.fc-result-summary dd {
+  margin: 2px 0 0;
+  color: #1f2a24;
+}
+
+.fc-result-cta-note {
+  font-size: 13px;
+  color: #4a5550;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.fc-result-cta-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #1a3d22;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background 0.2s ease;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.fc-result-cta-btn:hover {
+  background: #2d6e45;
+}
+
+/* ── q8Exit 画面 ─────────────────────────────────────────── */
+
+.fc-exit-note {
+  font-size: 13px;
+  color: #4a5550;
+  line-height: 1.7;
+  margin: 12px 0 16px;
+}
+
+.fc-exit-contact-link {
+  display: inline-block;
+  font-size: 13px;
+  color: #1a3d22;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── サブページ共通 ─────────────────────────────────────────── */
+
+.fc-entry-head h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 600;
+  color: #1a3d22;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.fc-entry-cta {
+  text-align: center;
+  margin: 40px 0 8px;
+}
+
+.fc-entry-cta-note {
+  font-size: 13px;
+  color: #4a5550;
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.fc-primary-btn {
+  display: inline-block;
+  background: #1a3d22;
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background 0.2s ease;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.fc-primary-btn:hover {
+  background: #2d6e45;
+}
+
+/* ── 事業承継・協議会 ステップ ──────────────────────────────── */
+
+.succession-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.succession-step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #fafaf6;
+  border: 1px solid #d8dfd5;
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.succession-step-num {
+  font-size: 11px;
+  font-weight: 700;
+  color: #2d6e45;
+  letter-spacing: 0.05em;
+  min-width: 28px;
+  padding-top: 2px;
+}
+
+.succession-step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.succession-step-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a3d22;
+  letter-spacing: 0.02em;
+}
+
+.succession-step-text {
+  font-size: 13px;
+  color: #4a5550;
+  line-height: 1.7;
+}
+
+/* ── サブページ ポイントリスト ──────────────────────────────── */
+
+.subpage-points {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.subpage-point {
+  background: #fafaf6;
+  border: 1px solid #d8dfd5;
+  border-left: 3px solid #2d6e45;
+  border-radius: 0 10px 10px 0;
+  padding: 16px 20px;
+}
+
+.subpage-point-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a3d22;
+  margin-bottom: 4px;
+}
+
+.subpage-point-text {
+  font-size: 13px;
+  color: #4a5550;
+  line-height: 1.7;
+}
+
+/* ── 自治体 簡易診断チェックリスト ─────────────────────────── */
+
+.muni-check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.muni-check-item {
+  background: #fafaf6;
+  border: 1px solid #d8dfd5;
+  border-radius: 10px;
+  padding: 14px 18px;
+}
+
+.muni-check-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #2d6e45;
+  margin-bottom: 2px;
+}
+
+.muni-check-question {
+  font-size: 14px;
+  color: #1a3d22;
+  line-height: 1.6;
+}
