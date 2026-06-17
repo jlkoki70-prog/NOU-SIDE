@@ -106,8 +106,12 @@ function getInitialVariant(): Variant {
   return null;
 }
 
+// Google Apps Script のWebアプリURL（…/exec）。
+// スパムフィルター無しで全件 nouside70@gmail.com にメール送信＋スプレッドシート記録。
+// 設定するとこちらが優先される。未設定の間は下記 Web3Forms にフォールバック。
+const APPS_SCRIPT_URL = "";
+
 // Web3Forms のアクセスキー（公開前提のキー。クライアントに埋め込んで使用）。
-// nouside70@gmail.com で web3forms.com に登録して発行されたキーをここに貼る。
 // 未設定の間はメール送信せず、完了画面のみ表示する。
 const WEB3FORMS_ACCESS_KEY = "3151886d-6884-4459-81df-6f4abc52bd2b";
 
@@ -138,6 +142,34 @@ export default function ContactPage() {
       ? new URLSearchParams(window.location.search).get("source") || "直接"
       : "直接";
     const badge = variant ? VARIANT_CONFIG[variant].badge : "未選択";
+
+    // Google Apps Script（優先）。スパムフィルター無しで全件届く。
+    // GASはCORSヘッダを返せないため no-cors（fire-and-forget）で送信する。
+    if (APPS_SCRIPT_URL) {
+      setSending(true);
+      try {
+        await fetch(APPS_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify({
+            種別: badge,
+            流入元: source,
+            お名前: form.name,
+            メールアドレス: form.email,
+            電話番号: form.phone || "（未記入）",
+            お問い合わせ内容: form.message,
+          }),
+        });
+        setSubmitted(true);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } catch {
+        setError(true);
+      } finally {
+        setSending(false);
+      }
+      return;
+    }
 
     // キー未設定時は従来どおり完了画面のみ（メール送信なし）
     if (!WEB3FORMS_ACCESS_KEY) {
