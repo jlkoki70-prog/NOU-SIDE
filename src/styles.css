@@ -2435,9 +2435,14 @@ footer {
    万一はみ出す場合は global の overflow-wrap: anywhere が緊急回避。
    PC・スマホ横（幅>480px や横向き）には一切適用しない。 */
 @media (max-width: 480px) and (orientation: portrait) {
-  .section-header h2,
-  .section-body p {
+  .section-header h2 {
     word-break: keep-all;
+  }
+
+  /* ヘッダーロゴを縮小（画面左半分を超えないように） */
+  .site-header-logo {
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
   }
 }
 

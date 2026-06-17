@@ -449,7 +449,7 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="site-header-inner">
-        <a href="/" className="site-header-logo">NOU-SIDE　PROJECT</a>
+        <a href="/" className="site-header-logo">NOU-SIDE PROJECT</a>
         <div className="site-header-nav">
           <button
             className="menu-button"
@@ -593,10 +593,10 @@ function ContentSection({
       <div className={`section-main${hasRightColumn ? "" : " section-main--text-only"}`}>
         <div className="section-body">
           {section.subtitle && (
-            <p className="section-subtitle">{jpWrap(section.subtitle)}</p>
+            <p className="section-subtitle">{section.subtitle}</p>
           )}
           {section.body.map((paragraph) => (
-            <p key={paragraph}>{jpWrap(paragraph)}</p>
+            <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
         {section.image && (
