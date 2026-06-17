@@ -96,8 +96,18 @@ const SELECT_OPTIONS: { variant: Exclude<Variant, null>; title: string; sub: str
   { variant: "other", title: "その他のお問合せ", sub: "上記に当てはまらないご相談" },
 ];
 
+function getInitialVariant(): Variant {
+  if (typeof window === "undefined") return null;
+  const params = new URLSearchParams(window.location.search);
+  const v = params.get("variant");
+  if (v === "relocation" || v === "business" || v === "expert" || v === "other") return v;
+  // 農家16問アプリなどからの遷移は「その他のお問合せ」フォームへ直接入る
+  if (params.get("source") === "farmers-check") return "other";
+  return null;
+}
+
 export default function ContactPage() {
-  const [variant, setVariant] = useState<Variant>(null);
+  const [variant, setVariant] = useState<Variant>(getInitialVariant);
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
 
