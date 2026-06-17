@@ -1427,7 +1427,8 @@ footer {
 
   .hero-visual-inner {
     position: relative;
-    aspect-ratio: 3 / 2;
+    width: 100%;
+    max-width: 100%;
     min-height: 320px;
     overflow: hidden;
   }
