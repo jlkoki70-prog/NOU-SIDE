@@ -153,6 +153,8 @@ export default function ContactPage() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
+          // ハニーポット：人間の送信では空。スパム誤判定を減らす（Web3Forms推奨）。
+          botcheck: false,
           subject: `【NOU-SIDE】お問い合わせ（${badge}）`,
           from_name: "NOU-SIDE サイト",
           replyto: form.email,
