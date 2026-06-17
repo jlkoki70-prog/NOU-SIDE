@@ -109,7 +109,7 @@ function getInitialVariant(): Variant {
 // Google Apps Script のWebアプリURL（…/exec）。
 // スパムフィルター無しで全件 nouside70@gmail.com にメール送信＋スプレッドシート記録。
 // 設定するとこちらが優先される。未設定の間は下記 Web3Forms にフォールバック。
-const APPS_SCRIPT_URL = "";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwKcxKhOtWYeFEI65X2iVls0EFuzmWRQxaaEzdKLIVyM68jam0RJn3TGFH9rgQ-VG8y8w/exec";
 
 // Web3Forms のアクセスキー（公開前提のキー。クライアントに埋め込んで使用）。
 // 未設定の間はメール送信せず、完了画面のみ表示する。
