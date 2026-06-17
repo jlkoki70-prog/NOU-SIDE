@@ -1421,15 +1421,17 @@ footer {
   }
 
   .footer-inner {
-    align-items: flex-start;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
   }
 
   .hero-visual-inner {
     position: relative;
     width: 100%;
     max-width: 100%;
-    min-height: 320px;
+    aspect-ratio: 3 / 2;
     overflow: hidden;
   }
 
