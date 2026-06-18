@@ -881,8 +881,8 @@ function ApproachPage() {
 
         <div className="approach-ai-banner">
           <img
-            src="/images/lp/section5-accordion-four-stages.webp"
-            alt="NOU-SIDEボットがつなぐ、就農前・修了〜一人前・独り立ち〜拡大・畳む時期の4つのステージを示す図"
+            src="/images/lp/approach-nouside-bot.webp"
+            alt="NOU-SIDEボットのキャラクター"
           />
         </div>
 
