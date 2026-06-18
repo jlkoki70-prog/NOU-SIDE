@@ -126,9 +126,9 @@ const lpSections: LPSection[] = [
     summary: "▶ 実行する当事者の納得が、地域施策の実行力と継続性を左右します。",
     accordionLabel: "合意形成の仕組みを詳しく見る",
     accordionItems: [
-      { title: "次世代の議論は、当事者である次世代の納得が大切", image: "/images/lp/section5-accordion-nextgen-consensus.webp", imageAlt: "当事者不在の議論と次世代が入る協議の比較図。次世代に選ばれる地域は、当事者を交えた建設的な協議ができる。" },
+      { title: "実行する当事者を議論に入れることが大切", image: "/images/lp/section5-accordion-nextgen-consensus.webp", imageAlt: "当事者不在の議論と次世代が入る協議の比較図。次世代に選ばれる地域は、当事者を交えた建設的な協議ができる。" },
       { title: "誰の仕事でもない課題こそ、地域の当事者が話し合う場が必要", image: "/images/lp/section5-accordion-community-discussion.webp", imageAlt: "農家・組合・自治体それぞれが単独では動かしにくい課題を、本音で話し合う地域協議の場が合意形成と実行につなげることを示す図" },
-      { title: "実行する当事者の納得感を見る", image: "/images/lp/section5-accordion-consensus.webp", imageAlt: "関係者が円卓で協議している図解。実行する当事者の納得感は、その将来性を大きく左右する。" },
+      { title: "次世代の議論は、当事者である次世代の納得が不可欠", image: "/images/lp/section5-accordion-consensus.webp", imageAlt: "関係者が円卓で協議している図解。実行する当事者の納得感は、その将来性を大きく左右する。" },
     ],
   },
   {
