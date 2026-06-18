@@ -881,8 +881,8 @@ function ApproachPage() {
 
         <div className="approach-ai-banner">
           <img
-            src="/images/lp/approach-nouside-bot.webp"
-            alt="NOU-SIDEボットのキャラクター"
+            src="/images/lp/approach-ai-support-robot.webp"
+            alt="煩雑な業務は、AIが支えます。"
           />
         </div>
 
