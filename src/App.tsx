@@ -891,8 +891,8 @@ function ApproachPage() {
         <div className="approach-footer-cta">
           <div className="container narrow">
             <p className="approach-footer-cta-lead">
-              NOU-SIDEの関わり方も、確かめてから選んでください。<br />
-              まだ具体化していなくても、地域の状況を一緒に整理するところから始められます。
+              まだ具体化していなくても、地域の状況を一緒に整理するところから始められます。<br />
+              まずは、お気軽にお問い合わせください。
             </p>
             <div className="approach-footer-cta-buttons">
               <a href="/" className="secondary-button">⇦ トップに戻って入口を選ぶ</a>
