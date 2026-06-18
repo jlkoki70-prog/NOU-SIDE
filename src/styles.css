@@ -2261,6 +2261,7 @@ footer {
   background: #ffffff;
   border-bottom: 1px solid rgba(31, 77, 46, 0.12);
   padding-top: 24px;
+  padding-bottom: 60px;
 }
 
 .manga-recap-toggle {

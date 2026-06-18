@@ -810,7 +810,6 @@ function ApproachExamplesAccordion() {
       >
         <span className="manga-recap-toggle-inner">
           ｜取組みの具体例をみる｜
-          <span className="manga-recap-toggle-icon" aria-hidden="true">{open ? "▲" : "▼"}</span>
         </span>
       </button>
       {open && (
