@@ -2207,6 +2207,25 @@ footer {
   line-height: 1.6;
 }
 
+.approach-ai-banner {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 40px 28px 0;
+  text-align: center;
+}
+
+.approach-ai-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 720px) {
+  .approach-ai-banner {
+    padding: 32px 16px 0;
+  }
+}
+
 .approach-footer-cta {
   padding: 64px 0;
   background: #f3f7ee;
