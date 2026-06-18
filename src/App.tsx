@@ -809,7 +809,7 @@ function ApproachExamplesAccordion() {
         onClick={() => setOpen((v) => !v)}
       >
         <span className="manga-recap-toggle-inner">
-          ｜取組みの具体例をみる｜
+          ｜他地域の参考事例をみる｜
         </span>
       </button>
       {open && (
