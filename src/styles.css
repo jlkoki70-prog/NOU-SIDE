@@ -2236,6 +2236,69 @@ footer {
   text-align: center;
 }
 
+/* ── マンガおさらいボタン ─────────────────────────────────────── */
+
+.manga-recap {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(31, 77, 46, 0.12);
+}
+
+.manga-recap-toggle {
+  display: block;
+  width: 100%;
+  padding: 20px 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1f4d2e;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: background 0.15s;
+}
+
+.manga-recap-toggle:hover {
+  background: #e7f1de;
+}
+
+.manga-recap-toggle-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.manga-recap-toggle-icon {
+  font-size: 0.8em;
+  color: #5d8a4c;
+}
+
+.manga-recap-panel {
+  padding: 0 28px 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.manga-recap-panel img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 720px) {
+  .manga-recap-toggle {
+    padding: 18px 16px;
+    font-size: 0.9rem;
+  }
+
+  .manga-recap-panel {
+    padding: 0 16px 24px;
+  }
+}
+
 /* ── /approach 目次 ──────────────────────────────────────────── */
 
 .approach-toc {

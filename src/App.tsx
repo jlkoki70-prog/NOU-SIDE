@@ -796,6 +796,33 @@ function FigureModal({ figure, onClose }: { figure: Figure; onClose: () => void 
 
 // ── ApproachPage（10章詳細ページ） ────────────────────────────────────────────
 
+function MangaRecap() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="manga-recap">
+      <button
+        type="button"
+        className="manga-recap-toggle"
+        aria-expanded={open}
+        onClick={() => setOpen((v) => !v)}
+      >
+        <span className="manga-recap-toggle-inner">
+          ｜トップページの内容をマンガでおさらい｜
+          <span className="manga-recap-toggle-icon" aria-hidden="true">{open ? "▲" : "▼"}</span>
+        </span>
+      </button>
+      {open && (
+        <div className="manga-recap-panel">
+          <img
+            src="/images/lp/approach-manga-summary.webp"
+            alt="トップページの内容を10コマのマンガで整理した図解。人が減ると地域を支える力が弱くなるところから始まり、担い手につながる流れを示す"
+          />
+        </div>
+      )}
+    </div>
+  );
+}
+
 function ApproachPage() {
   return (
     <PageShell>
@@ -813,6 +840,8 @@ function ApproachPage() {
             </p>
           </div>
         </div>
+
+        <MangaRecap />
 
         <ApproachToc />
 
