@@ -2517,6 +2517,12 @@ footer {
   }
 }
 
+@media (max-width: 480px) and (orientation: portrait) {
+  .approach-footer-cta-buttons {
+    flex-direction: column-reverse;
+  }
+}
+
 /* ── スマホ縦のみ：日本語を自然な区切りで折り返す ──────────────────
    word-break: keep-all で勝手な改行を止め、jpWrap が挿入した
    <wbr>（句読点直後・指定マーカー）の位置でのみ折り返す。
