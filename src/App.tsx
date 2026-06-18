@@ -798,6 +798,33 @@ function FigureModal({ figure, onClose }: { figure: Figure; onClose: () => void 
 
 // ── ApproachPage（10章詳細ページ） ────────────────────────────────────────────
 
+function ApproachExamplesAccordion() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="manga-recap">
+      <button
+        type="button"
+        className="manga-recap-toggle"
+        aria-expanded={open}
+        onClick={() => setOpen((v) => !v)}
+      >
+        <span className="manga-recap-toggle-inner">
+          ｜取組みの具体例をみる｜
+          <span className="manga-recap-toggle-icon" aria-hidden="true">{open ? "▲" : "▼"}</span>
+        </span>
+      </button>
+      {open && (
+        <div className="manga-recap-panel">
+          <img
+            src="/images/lp/approach-ai-capacity-examples.webp"
+            alt="AIで組合職員の余力はどこまで生み出せるか。AIが担う業務・軽くなる日常業務・生まれる余力・戻せる時間と、JA横浜×CTC・JA伊勢・農業協同組合・農研機構×三重県の確認できた事例を示す図"
+          />
+        </div>
+      )}
+    </div>
+  );
+}
+
 function MangaRecap() {
   const [open, setOpen] = useState(false);
   return (
@@ -859,6 +886,8 @@ function ApproachPage() {
             alt="煩雑な業務は、AIが支えます。"
           />
         </div>
+
+        <ApproachExamplesAccordion />
 
         <div className="approach-footer-cta">
           <div className="container narrow">
