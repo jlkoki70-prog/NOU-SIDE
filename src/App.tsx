@@ -827,7 +827,7 @@ function ApproachExamplesAccordion() {
 function MangaRecap() {
   const [open, setOpen] = useState(false);
   return (
-    <div className="manga-recap">
+    <div className="manga-recap manga-recap--comic">
       <button
         type="button"
         className="manga-recap-toggle"
