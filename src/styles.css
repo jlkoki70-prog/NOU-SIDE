@@ -2540,33 +2540,34 @@ footer {
   padding-bottom: 28px;
 }
 
+/* 塗りなし（白地のまま）＋茶系枠線。本文の濃緑は既定値を継承して変更しない */
 .manga-recap--comic .manga-recap-toggle {
-  background: #f0f2ea;
-  border: 1.5px solid #8a9b7e;
-  color: #4a5d3f;
-  box-shadow: 0 2px 0 rgba(74, 93, 63, 0.14);
+  background: transparent;
+  border: 1.5px solid #c9a392;
+  box-shadow: 0 2px 0 rgba(104, 73, 61, 0.14);
 }
 
-.manga-recap--comic .manga-recap-toggle-sub {
-  color: #4a5d3f;
+.manga-recap--comic .manga-recap-toggle-sub,
+.manga-recap--comic .manga-recap-toggle-icon {
+  color: #68493d;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .manga-recap--comic .manga-recap-toggle:hover {
-    background: #e7ebdd;
+    background: #f7efeb;
     transform: translateY(-1px);
-    box-shadow: 0 3px 0 rgba(74, 93, 63, 0.14);
+    box-shadow: 0 3px 0 rgba(104, 73, 61, 0.14);
   }
 }
 
 .manga-recap--comic .manga-recap-toggle:active {
   transform: translateY(1px);
-  box-shadow: 0 1px 0 rgba(74, 93, 63, 0.14);
+  box-shadow: 0 1px 0 rgba(104, 73, 61, 0.14);
 }
 
 .manga-recap--comic .manga-recap-toggle[aria-expanded="true"] {
-  background: #e7ebdd;
-  box-shadow: 0 1px 0 rgba(74, 93, 63, 0.14);
+  background: #f7efeb;
+  box-shadow: 0 1px 0 rgba(104, 73, 61, 0.14);
 }
 
 @media (max-width: 720px) {
