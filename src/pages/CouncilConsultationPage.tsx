@@ -227,7 +227,7 @@ export default function CouncilConsultationPage() {
                   <p style={{ textAlign: "center", color: cc.inkMute, fontSize: "12px", marginTop: "16px", letterSpacing: "0.05em" }}>所要時間 約3〜5分</p>
                 </div>
 
-                <button onClick={() => go("q1")} style={{ display: "block", width: "100%", background: `linear-gradient(135deg, ${cc.greenMain}, ${cc.greenDeep})`, color: cc.white, fontFamily: "'Zen Maru Gothic', sans-serif", fontWeight: 700, fontSize: "17px", padding: "18px 24px", border: "none", borderRadius: "14px", cursor: "pointer", letterSpacing: "0.02em" }}>
+                <button onClick={() => go("q1")} className="consult-start-button" style={{ fontFamily: "'Zen Maru Gothic', sans-serif", fontSize: "17px", letterSpacing: "0.02em" }}>
                   相談をはじめる<span style={{ marginLeft: "8px" }}>→</span>
                 </button>
               </div>

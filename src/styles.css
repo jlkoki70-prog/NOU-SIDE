@@ -1188,7 +1188,7 @@ footer {
   gap: 12px;
   background: #fbfdf9;
   border: 1px solid rgba(31, 77, 46, 0.22);
-  border-radius: 18px;
+  border-radius: 16px;
   padding: 11px 20px;
   min-height: 44px;
   max-width: 520px;
@@ -1198,13 +1198,23 @@ footer {
   width: 100%;
   text-align: left;
   text-decoration: none;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 2px 0 rgba(31, 77, 46, 0.14);
+  transition: background 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease, transform 0.14s ease;
 }
 
-.accordion-toggle:hover {
-  color: #1a3d22;
-  background: #eef4e8;
-  border-color: rgba(31, 77, 46, 0.35);
+@media (hover: hover) and (pointer: fine) {
+  .accordion-toggle:hover {
+    color: #1a3d22;
+    background: #eef4e8;
+    border-color: rgba(31, 77, 46, 0.35);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 0 rgba(31, 77, 46, 0.14);
+  }
+}
+
+.accordion-toggle:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 rgba(31, 77, 46, 0.14);
 }
 
 .accordion-toggle:focus-visible {
@@ -1212,9 +1222,11 @@ footer {
   outline-offset: 2px;
 }
 
+/* 開状態：影を浅くして「押し込まれた」状態を表現 */
 .accordion-toggle[aria-expanded="true"] {
   background: #eef4e8;
   border-color: rgba(31, 77, 46, 0.35);
+  box-shadow: 0 1px 0 rgba(31, 77, 46, 0.14);
 }
 
 .accordion-toggle-inner {
@@ -1649,14 +1661,25 @@ footer {
   padding: 11px 24px;
   min-height: 44px;
   border: 1.5px solid rgba(31, 77, 46, 0.55);
-  border-radius: 999px;
+  border-radius: 16px;
   background: #f0f6eb;
   color: #1a3d22;
   font-size: 0.94rem;
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
-  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  box-shadow: 0 2px 0 rgba(31, 77, 46, 0.14);
+  transition: background 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease, transform 0.14s ease;
+}
+
+.hero-cta-link:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 rgba(31, 77, 46, 0.14);
+}
+
+.hero-cta-link:focus-visible {
+  outline: 2px solid #2d6e45;
+  outline-offset: 2px;
 }
 
 .hero-cta-link::after {
@@ -1665,11 +1688,14 @@ footer {
   font-size: 0.9em;
 }
 
-.hero-cta-link:hover {
-  background: #e3f0da;
-  border-color: rgba(31, 77, 46, 0.65);
-  box-shadow: 0 3px 10px rgba(31, 77, 46, 0.12);
-  transform: translateY(-1px);
+/* hover浮上はマウス環境のみ（タッチ端末のhover固着防止） */
+@media (hover: hover) and (pointer: fine) {
+  .hero-cta-link:hover {
+    background: #e3f0da;
+    border-color: rgba(31, 77, 46, 0.65);
+    box-shadow: 0 3px 0 rgba(31, 77, 46, 0.16);
+    transform: translateY(-1px);
+  }
 }
 
 /* ── 簡易診断表 ──────────────────────────────────────────────── */
@@ -1772,13 +1798,24 @@ footer {
   padding: 12px 36px;
   min-height: 48px;
   border: 2px solid #1f4d2e;
-  border-radius: 999px;
+  border-radius: 16px;
   background: #ffffff;
   color: #1f4d2e;
   font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none;
-  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  box-shadow: 0 3px 0 rgba(31, 77, 46, 0.18);
+  transition: background 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease, transform 0.14s ease;
+}
+
+.approach-link-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 rgba(31, 77, 46, 0.18);
+}
+
+.approach-link-btn:focus-visible {
+  outline: 2px solid #2d6e45;
+  outline-offset: 2px;
 }
 
 .approach-link-btn .btn-arrow {
@@ -1786,11 +1823,12 @@ footer {
   font-size: 1.05em;
 }
 
-.approach-link-btn:hover {
-  background: #f3f7ee;
-  border-color: rgba(31, 77, 46, 0.6);
-  box-shadow: 0 4px 14px rgba(31, 77, 46, 0.12);
-  transform: translateY(-1px);
+@media (hover: hover) and (pointer: fine) {
+  .approach-link-btn:hover {
+    background: #f3f7ee;
+    box-shadow: 0 4px 0 rgba(31, 77, 46, 0.18);
+    transform: translateY(-1px);
+  }
 }
 
 .approach-link-aside {
@@ -1878,7 +1916,55 @@ footer {
   flex: 1;
 }
 
-/* 主ボタン：カード内の行動ボタン（濃緑背景・白文字） */
+/* 動きを減らす設定：ボタンのアニメーションを止める（位置変化は瞬時に切替） */
+@media (prefers-reduced-motion: reduce) {
+  .hero-cta-link,
+  .approach-link-btn,
+  .entrance-card-cta,
+  .accordion-toggle,
+  .manga-recap-toggle,
+  .consult-start-button {
+    transition: none;
+  }
+}
+
+/* 主ボタン：相談フォームの「相談をはじめる」（単独・最強） */
+.consult-start-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 58px;
+  padding: 16px 24px;
+  background: #2b4a1e;
+  color: #ffffff;
+  font-weight: 700;
+  border: 1px solid #1f3a14;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #1f3a14;
+  transition: background 0.14s ease, box-shadow 0.14s ease, transform 0.14s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .consult-start-button:hover {
+    background: #1f3a14;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 0 #1f3a14;
+  }
+}
+
+.consult-start-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #1f3a14;
+}
+
+.consult-start-button:focus-visible {
+  outline: 2px solid #2d6e45;
+  outline-offset: 2px;
+}
+
+/* 主ボタン：カード内の行動ボタン（濃緑背景・白文字・浅い下影） */
 .entrance-card-cta {
   display: flex;
   align-items: center;
@@ -1887,12 +1973,14 @@ footer {
   margin-top: 14px;
   padding: 12px 20px;
   min-height: 46px;
-  border-radius: 999px;
+  border: 1px solid #1f3a14;
+  border-radius: 16px;
   background: #2b4a1e;
   color: #ffffff;
   font-size: 0.93rem;
   font-weight: 700;
-  transition: background 0.15s ease;
+  box-shadow: 0 3px 0 #1f3a14;
+  transition: background 0.14s ease, box-shadow 0.14s ease, transform 0.14s ease;
 }
 
 .entrance-card-arrow {
@@ -1905,8 +1993,22 @@ footer {
   transform: translateX(4px);
 }
 
-.entrance-card:hover .entrance-card-cta {
-  background: #1f3a14;
+@media (hover: hover) and (pointer: fine) {
+  .entrance-card:hover .entrance-card-cta {
+    background: #1f3a14;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 0 #1f3a14;
+  }
+}
+
+.entrance-card:active .entrance-card-cta {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #1f3a14;
+}
+
+.entrance-card:focus-visible {
+  outline: 2px solid #2d6e45;
+  outline-offset: 2px;
 }
 
 .entrance-footnote {
@@ -2379,22 +2481,47 @@ footer {
 }
 
 .manga-recap-toggle {
-  display: block;
-  width: 100%;
-  padding: 20px 28px;
-  background: none;
-  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 520px);
+  min-height: 48px;
+  margin: 0 auto;
+  padding: 12px 28px;
+  background: #fbfdf9;
+  border: 1px solid rgba(31, 77, 46, 0.22);
+  border-radius: 16px;
   cursor: pointer;
   color: #1f4d2e;
   font-size: 1rem;
   font-family: inherit;
   font-weight: 600;
   letter-spacing: 0.04em;
-  transition: background 0.15s;
+  box-shadow: 0 2px 0 rgba(31, 77, 46, 0.14);
+  transition: background 0.14s ease, box-shadow 0.14s ease, transform 0.14s ease;
 }
 
-.manga-recap-toggle:hover {
-  background: #e7f1de;
+@media (hover: hover) and (pointer: fine) {
+  .manga-recap-toggle:hover {
+    background: #e7f1de;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 0 rgba(31, 77, 46, 0.14);
+  }
+}
+
+.manga-recap-toggle:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 rgba(31, 77, 46, 0.14);
+}
+
+.manga-recap-toggle:focus-visible {
+  outline: 2px solid #2d6e45;
+  outline-offset: 2px;
+}
+
+.manga-recap-toggle[aria-expanded="true"] {
+  background: #eef4e8;
+  box-shadow: 0 1px 0 rgba(31, 77, 46, 0.14);
 }
 
 .manga-recap-toggle-inner {
