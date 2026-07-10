@@ -838,6 +838,7 @@ function MangaRecap() {
           ｜トップページの内容をマンガでおさらい｜
           <span className="manga-recap-toggle-icon" aria-hidden="true">{open ? "▲" : "▼"}</span>
         </span>
+        <span className="manga-recap-toggle-sub">（マンガをみる）</span>
       </button>
       {open && (
         <div className="manga-recap-panel">
