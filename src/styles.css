@@ -1936,6 +1936,7 @@ footer {
   width: 100%;
   min-height: 58px;
   padding: 16px 24px;
+  line-height: 1.4;
   background: #2b4a1e;
   color: #ffffff;
   font-weight: 700;
