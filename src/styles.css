@@ -1060,8 +1060,15 @@ footer {
 }
 
 /* ── Section 2: 背景白・インフラグリッド画像（横長・全幅） ── */
-#section-02 {
-  background: #fff;
+/* ── 背景色（内容の役割ごと） ──────────────────────────────
+   問い・導入（section-02/03）: 白
+   判断材料〜内側の限界（section-06/07/セルフチェック）: 薄いベージュ
+   本質・橋渡し（section-04/09）: ごく薄い緑
+   最終CTA（entrance）: 白 */
+
+#section-02,
+#section-03 {
+  background: #ffffff;
 }
 
 #section-02 .section-main {
@@ -1268,13 +1275,34 @@ footer {
 
 #section-04,
 #section-06 {
-  background: rgba(236, 242, 229, 0.42);
+  background: #f8f6ee;
 }
 
 #section-07 {
-  background: rgba(236, 242, 229, 0.65);
+  background: #f8f6ee;
   border-top: 1px solid rgba(31, 77, 46, 0.07);
   border-bottom: 1px solid rgba(31, 77, 46, 0.07);
+}
+
+/* 薄緑背景セクション（section-04）。section-09 は白（視覚的リセット） */
+#section-04 {
+  background: #f1f6ef;
+}
+
+#section-09 {
+  background: #ffffff;
+}
+
+/* 薄緑背景では内部要素が同化しないよう白背景にする */
+#section-04 .section-image-card,
+#section-04 .section-summary,
+#section-04 .accordion-toggle {
+  background: #ffffff;
+}
+
+#section-04 .accordion-toggle:hover,
+#section-04 .accordion-toggle[aria-expanded="true"] {
+  background: #e7f0df;
 }
 
 /* ── CTA Section (new) ── */
@@ -1625,7 +1653,7 @@ footer {
 /* ── 簡易診断表 ──────────────────────────────────────────────── */
 
 .diagnostic-section {
-  background: #fff;
+  background: #f8f6ee;
 }
 
 .diagnostic-main {
@@ -1757,7 +1785,7 @@ footer {
 /* ── 入口セクション（Section 7） ─────────────────────────────── */
 
 .entrance-section {
-  background: #f3f7ee;
+  background: #f1f6ef;
 }
 
 .entrance-cards {
