@@ -835,7 +835,7 @@ function MangaRecap() {
         onClick={() => setOpen((v) => !v)}
       >
         <span className="manga-recap-toggle-inner">
-          ｜トップページの内容をマンガでおさらい｜
+          <span><span aria-hidden="true">｜</span>トップページの内容をマンガでおさらい<span aria-hidden="true">｜</span></span>
           <span className="manga-recap-toggle-icon" aria-hidden="true">{open ? "▲" : "▼"}</span>
         </span>
         <span className="manga-recap-toggle-sub">（マンガをみる）</span>
