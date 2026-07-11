@@ -204,10 +204,10 @@ export default function FarmersSuccessionPage() {
             <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
               <span style={{ fontSize: "20px" }}>🌾</span>
               <div>
-                <h1 style={{ fontFamily: "'Zen Maru Gothic', sans-serif", fontWeight: 700, fontSize: "16px", lineHeight: 1.4, margin: 0 }}>
+                <h1 style={{ fontFamily: "'Zen Maru Gothic', sans-serif", fontWeight: 700, fontSize: "16px", lineHeight: 1.4, margin: 0, color: "#ffffff", textShadow: "0 1px 1px rgba(10,55,29,0.3)" }}>
                   経営・農地の引き継ぎを相談する
                 </h1>
-                <div style={{ fontSize: "11px", opacity: 0.75, marginTop: "2px" }}>NOU-SIDE 承継相談フォーム</div>
+                <div style={{ fontSize: "11px", color: "rgba(255,255,255,0.88)", marginTop: "2px", textShadow: "0 1px 1px rgba(10,55,29,0.3)" }}>NOU-SIDE 承継相談フォーム</div>
               </div>
             </div>
           </div>
