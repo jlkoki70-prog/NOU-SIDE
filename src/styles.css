@@ -2543,7 +2543,7 @@ footer {
 /* 塗りなし（白地のまま）＋茶系枠線。本文の濃緑は既定値を継承して変更しない */
 .manga-recap--comic .manga-recap-toggle {
   background: transparent;
-  border: 1.5px solid #c9a392;
+  border: 1.5px solid #b08468;
   box-shadow: 0 2px 0 rgba(104, 73, 61, 0.14);
 }
 
