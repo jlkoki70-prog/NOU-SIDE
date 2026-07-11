@@ -138,11 +138,13 @@ export default function SupportNextGenPage() {
                     fontSize: "16px",
                     lineHeight: 1.4,
                     margin: 0,
+                    color: "#ffffff",
+                    textShadow: "0 1px 1px rgba(10,55,29,0.3)",
                   }}
                 >
                   組合・支援機関 用 簡易診断
                 </h1>
-                <div style={{ fontSize: "11px", opacity: 0.75, marginTop: "2px", letterSpacing: "0.05em" }}>
+                <div style={{ fontSize: "11px", color: "rgba(255,255,255,0.88)", marginTop: "2px", letterSpacing: "0.05em", textShadow: "0 1px 1px rgba(10,55,29,0.3)" }}>
                   NOU-SIDE プロジェクト
                 </div>
               </div>
