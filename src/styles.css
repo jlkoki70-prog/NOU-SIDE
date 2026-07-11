@@ -2533,6 +2533,50 @@ footer {
   color: #2d6e45;
 }
 
+/* ── マンガおさらい（補足コンテンツへの入口）: セージ系（明度・彩度違い） ──
+   通常の章移動・相談CTA（緑系）と区別する。対象はこのボタンのみ。 */
+.manga-recap--comic {
+  padding-top: 24px;
+  padding-bottom: 28px;
+}
+
+/* 塗りなし（白地のまま）＋茶系枠線。本文の濃緑は既定値を継承して変更しない */
+.manga-recap--comic .manga-recap-toggle {
+  background: transparent;
+  border: 1.5px solid #b08468;
+  box-shadow: 0 2px 0 rgba(104, 73, 61, 0.14);
+}
+
+.manga-recap--comic .manga-recap-toggle-sub,
+.manga-recap--comic .manga-recap-toggle-icon {
+  color: #68493d;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .manga-recap--comic .manga-recap-toggle:hover {
+    background: #f7efeb;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 0 rgba(104, 73, 61, 0.14);
+  }
+}
+
+.manga-recap--comic .manga-recap-toggle:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 rgba(104, 73, 61, 0.14);
+}
+
+.manga-recap--comic .manga-recap-toggle[aria-expanded="true"] {
+  background: #f7efeb;
+  box-shadow: 0 1px 0 rgba(104, 73, 61, 0.14);
+}
+
+@media (max-width: 720px) {
+  .manga-recap--comic {
+    padding-top: 18px;
+    padding-bottom: 24px;
+  }
+}
+
 .manga-recap-toggle-inner {
   display: flex;
   align-items: center;
